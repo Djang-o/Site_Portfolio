@@ -1,0 +1,239 @@
+
+
+
+
+*{
+    margin: 0;
+    background: #f7f7f7;
+    box-sizing: border-box;
+}
+header.transparent-container {
+    position: relative;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    border-bottom: 0.5px solid #555;
+    position: relative;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 1;
+}
+header #logotipo{
+    width: 5vh;
+    height: 5vh;
+    fill: #0000cc;
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    transform: translateY(-50%);
+
+}
+
+#menu{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    
+}
+#menu ul { padding:0px;
+    margin:0px;
+    list-style:none;
+    background-color: transparent;
+  }
+
+  #menu ul li { display: inline; background-color: transparent; list-style: none;margin-right: 10px;  margin-left: 10px;}
+
+  #menu ul li a {
+    text-decoration: none;
+    color: #333333; /* Cor do texto normal */
+    position: relative; /* Adicionando posição relativa para servir como referência para a barra */
+  
+    font-weight: bold;
+}
+
+#menu ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Distância da barra ao texto */
+    height: 2px; /* Altura da barra */
+    background-color: transparent; /* Cor da barra padrão (invisível) */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+    
+}
+
+#menu ul li a:hover::after {
+    background-color: #0000cc; /* Cor da barra ao passar o mouse */
+    
+}
+#menu ul li a:hover {
+    color: #0000cc; /* Cor do texto ao passar o mouse */
+}
+
+
+#logo-text {
+    margin-left: 10px; /* Ajuste a margem conforme necessário */
+    font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(5vh + 120px); /* Largura do logotipo + margem entre o logotipo e o texto */
+    background-color: transparent;
+    
+}
+
+#canvas {
+    position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #dbdada;
+    z-index: -1;
+}
+
+
+
+.corpo{
+    position: absolute;
+    background-color: transparent;
+}
+
+
+.corpo h1 {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    transform: translateY(10%);
+    margin-top: 20vh;
+    font-size: 50px;
+    
+}
+
+.corpo h2 {
+    position: absolute;
+    background-color: transparent;
+    transform: translateY(10%);
+    top: 60%;
+    margin-top: 30vh;
+    font-size: 40px;
+}
+
+.corpo h3 {
+    position: absolute;
+    background-color: transparent;
+    transform: translateY(10%);
+    top: 60%;
+    margin-top: 40vh;
+    font-size: 25px;
+}
+
+
+.corpo  h1, .corpo  h2, .corpo h3 {
+    white-space: nowrap;
+}
+
+
+
+
+.corpo  h2 .rocha-text {
+    color:#ff9c08;
+    background-color: transparent;
+}
+
+.corpo  h3 .mobile-text {
+    color:#a83203;
+    background-color: transparent;
+}
+
+.corpo  h3 .mobile-text::before {
+    content: "";
+    color:#a83203;
+    animation: word 20s infinite;
+}
+
+.corpo  h3 .mobile-text::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 5%;
+    border-top: 2px solid #a83203 ;
+    bottom: 5px;
+    right: -10px;
+    opacity: 1;
+    animation: cursor .8s infinite;
+
+}
+
+.corpo button {
+    position: absolute;
+    background-color: #020292;
+    color: #ffffff;
+    margin-top: 50vh;
+    width: 25vh;
+    height: 6.5vh;
+    border-radius: 15px;
+    font-weight: bold;
+    border: none;
+    margin-right: 10px;
+    box-shadow:  0 4px 20px rgba(0, 37, 248, 0.596);
+}
+
+
+@keyframes cursor {
+    0%{
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes word {
+    0%,20%{
+        content: "Mobile Develop"
+    }
+    21%,40%{
+        content: "Android";
+    }
+    41%,60%{
+        content: "Flutter";
+    }
+    61%,80%{
+        content: "Kotlin";
+    }
+    81%,100%{
+        content: "Python";
+    }
+    
+
+}
+
+.corpo .i {
+    position: absolute;
+    top: 17vh;
+    left: 50vw; /* Ajuste a distância da imagem em relação à direita conforme necessário */
+    bottom: 100%;
+    transform: translateY(-50%);
+    background-color: transparent;
+}
+
+#photo {
+    width: 250px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 50%; /* Adiciona bordas arredondadas à imagem */
+}
+
+#ki{
+    position: absolute;
+    top: 50vh;
+    background-color: transparent;
+    left: 15vw;
+
+}
